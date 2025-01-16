@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Logo.ico" type="image/x-icon">
+    <title>7 Wonders of the World : gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="first">
+        <div class="left">
+            <img src="images/Logo.svg" alt="logo">
+        </div>
+        <div class="left">
+            <a href="index.html">
+                <div class="line"></div>
+                <p>Home</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="support.html">
+                <div class="line"></div>
+                <p>Support</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="about.html">
+                <div class="line"></div>
+                <p>About</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="right" id="dropdownButton">
+            <img src="images/More_left.svg" class="More" alt="MoreL">
+            <img src="images/More_middle.svg" class="More" alt="MoreM">
+            <img src="images/More_right.svg" class="More" alt="MoreR">
+        </div>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="gallery.html">
+                <p>Gallery</p>
+            </a>
+            <a href="maps.html">
+                <p>Maps</p>
+            </a>
+        </div>
+    </header>
+    <header class="second">
+        <div class="left">
+            <img src="images/Logo.svg" alt="logo">
+        </div>
+        <div class="left">
+            <a href="index.html">
+                <div class="line"></div>
+                <p>Home</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="support.html">
+                <div class="line"></div>
+                <p>Support</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="about.html">
+                <div class="line"></div>
+                <p>About</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="gallery.html">
+                <div class="line"></div>
+                <p>Gallery</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="maps.html">
+                <div class="line"></div>
+                <p>Maps</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        
+    </header>
+    <main class="galleryPage">
+        <div id="content">
+            <div class="gallery-container">
+                <button class="button button-left" onclick="prevImage()">❮</button>
+                <div class="gallery">
+                    <img src="images/SameScale/ChichénItzá.jpg" alt="Image 1">
+                    <img src="images/SameScale/ChichénItzá2.jpg" alt="Image 2">
+                    <img src="images/SameScale/Colosseum.jpg" alt="Image 3">
+                    <img src="images/SameScale/Colosseum3.jpg" alt="Image 4">
+                    <img src="images/SameScale/MachuPicchu.jpg" alt="Image 5">
+                    <img src="images/SameScale/MachuPicchu2.jpg" alt="Image 6">
+                    <img src="images/SameScale/Petra.jpg" alt="Image 7">
+                    <img src="images/SameScale/Petra2.jpg" alt="Image 8">
+                    <img src="images/SameScale/Petra3.jpg" alt="Image 9">
+                    <img src="images/SameScale/TajMahal.jpg" alt="Image 10">
+                    <img src="images/SameScale/TajMahal2.jpg" alt="Image 11">
+                    <img src="images/SameScale/TajMahal3.jpg" alt="Image 12">
+                </div>
+                <button class="button button-right" onclick="nextImage()">❯</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Jan Wdowiak 2tb</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const button = document.getElementById('dropdownButton');
+            const menu = document.getElementById('dropdownMenu');
+
+            button.addEventListener('click', () => {
+                event.stopPropagation();
+                button.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!button.contains(event.target) && !menu.contains(event.target)) {
+                    button.classList.remove('active');
+                }
+            });
+        });
+
+        let index = 0;
+        const images = document.querySelectorAll('.gallery img');
+        const totalImages = images.length;
+
+        function updateGallery() {
+            const offset = -index * 100;
+            document.querySelector('.gallery').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextImage() {
+            index = (index + 1) % totalImages; updateGallery();
+
+        }
+
+        function prevImage() {
+            index = (index - 1 + totalImages) % totalImages;
+            updateGallery();
+        }
+
+
+        function updateContainerHeight()
+        {
+            const currentImage = images[index];
+            const galleryContainer = document.querySelector('.gallery-container');
+            galleryContainer.style.height = `${currentImage.offsetHeight}px`;
+        }
+        window.onload = updateContainerHeight;
+        window.onresize = updateContainerHeight;
+    </script>
+</body>
+
+</html>

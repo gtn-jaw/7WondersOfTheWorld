@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Wonders of the World : home</title>
+    <link rel="icon" href="images/Logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="first">
+        <div class="left">
+            <img src="images/Logo.svg" alt="logo">
+        </div>
+        <div class="left">
+            <a href="index.html">
+                <div class="line"></div>
+                <p>Home</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="support.html">
+                <div class="line"></div>
+                <p>Support</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="about.html">
+                <div class="line"></div>
+                <p>About</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="right" id="dropdownButton">
+            <img src="images/More_left.svg" class="More" alt="MoreL">
+            <img src="images/More_middle.svg" class="More" alt="MoreM">
+            <img src="images/More_right.svg" class="More" alt="MoreR">
+        </div>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="gallery.html">
+                <p>Gallery</p>
+            </a>
+            <a href="maps.html">
+                <p>Maps</p>
+            </a>
+        </div>
+    </header>
+    <header class="second">
+        <div class="left">
+            <img src="images/Logo.svg" alt="logo">
+        </div>
+        <div class="left">
+            <a href="index.html">
+                <div class="line"></div>
+                <p>Home</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="support.html">
+                <div class="line"></div>
+                <p>Support</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="about.html">
+                <div class="line"></div>
+                <p>About</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="gallery.html">
+                <div class="line"></div>
+                <p>Gallery</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="maps.html">
+                <div class="line"></div>
+                <p>Maps</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        
+    </header>
+    <main class="support">
+        <div id="content">
+            <form action="mailto:myemail.com" method="post" enctype="text/plain">
+                <h1>Quiz Form</h1>
+                <div class="question">
+                    <label>1. Completed in 1653:</label>
+                    <label><input type="radio" name="q1" value="Christ the Redeemer"> Christ the Redeemer</label>
+                    <label><input type="radio" name="q1" value="Great Wall of China"> Great Wall of China</label>
+                    <label><input type="radio" name="q1" value="Petra"> Petra</label>
+                    <label><input type="radio" name="q1" value="Colosseum"> Colosseum</label>
+                    <label><input type="radio" name="q1" value="Chichén Itzá"> Chichén Itzá</label>
+                    <label><input type="radio" name="q1" value="Machu Picchu"> Machu Picchu</label>
+                    <label><input type="radio" name="q1" value="Taj Mahal"> Taj Mahal</label>
+                </div>
+                <div class="question">
+                    <label>2. Stretches over 23,000km:</label>
+                    <label><input type="radio" name="q2" value="Christ the Redeemer"> Christ the Redeemer</label>
+                    <label><input type="radio" name="q2" value="Great Wall of China"> Great Wall of China</label>
+                    <label><input type="radio" name="q2" value="Petra"> Petra</label>
+                    <label><input type="radio" name="q2" value="Colosseum"> Colosseum</label>
+                    <label><input type="radio" name="q2" value="Chichén Itzá"> Chichén Itzá</label>
+                    <label><input type="radio" name="q2" value="Machu Picchu"> Machu Picchu</label>
+                    <label><input type="radio" name="q2" value="Taj Mahal"> Taj Mahal</label>
+                </div>
+                <div class="question"> <label>3. Perched high in the Andes Mountains of Peru:</label>
+                    <label><input type="radio" name="q3" value="Christ the Redeemer"> Christ the Redeemer</label>
+                    <label><input type="radio" name="q3" value="Great Wall of China"> Great Wall of China</label>
+                    <label><input type="radio" name="q3" value="Petra"> Petra</label>
+                    <label><input type="radio" name="q3" value="Colosseum"> Colosseum</label>
+                    <label><input type="radio" name="q3" value="Chichén Itzá"> Chichén Itzá</label>
+                    <label><input type="radio" name="q3" value="Machu Picchu"> Machu Picchu</label>
+                    <label><input type="radio" name="q3" value="Taj Mahal"> Taj Mahal</label>
+                </div>
+                <div class="question">
+                    <label>4. How tall is Christ the Redeemer?</label>
+                    <input type="number" name="q4" min="10" max="100">
+                </div>
+                <div class="button-container">
+                    <button type="reset">Clear</button>
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Jan Wdowiak 2tb</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const button = document.getElementById('dropdownButton');
+            const menu = document.getElementById('dropdownMenu');
+
+            button.addEventListener('click', () => {
+                event.stopPropagation();
+                button.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!button.contains(event.target) && !menu.contains(event.target)) {
+                    button.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

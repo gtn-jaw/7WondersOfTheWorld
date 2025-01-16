@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Logo.ico" type="image/x-icon">
+    <title>7 Wonders of the World : about</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="first">
+        <div class="left">
+            <img src="images/Logo.svg" alt="logo">
+        </div>
+        <div class="left">
+            <a href="index.html">
+                <div class="line"></div>
+                <p>Home</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="support.html">
+                <div class="line"></div>
+                <p>Support</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="about.html">
+                <div class="line"></div>
+                <p>About</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="right" id="dropdownButton">
+            <img src="images/More_left.svg" class="More" alt="MoreL">
+            <img src="images/More_middle.svg" class="More" alt="MoreM">
+            <img src="images/More_right.svg" class="More" alt="MoreR">
+        </div>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="gallery.html">
+                <p>Gallery</p>
+            </a>
+            <a href="maps.html">
+                <p>Maps</p>
+            </a>
+        </div>
+    </header>
+    <header class="second">
+        <div class="left">
+            <img src="images/Logo.svg" alt="logo">
+        </div>
+        <div class="left">
+            <a href="index.html">
+                <div class="line"></div>
+                <p>Home</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="support.html">
+                <div class="line"></div>
+                <p>Support</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="about.html">
+                <div class="line"></div>
+                <p>About</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="gallery.html">
+                <div class="line"></div>
+                <p>Gallery</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="maps.html">
+                <div class="line"></div>
+                <p>Maps</p>
+                <div class="line"></div>
+            </a>
+        </div>
+
+    </header>
+    <main class="about">
+        <div id="content">
+            <h2>External thematically related pages</h2>
+            <a href="https://www.wikivoyage.org/" target="_blank">wikivoyage (new tab)</a>
+            <a href="https://whc.unesco.org/en/list/" target="_blank">unesco.org (new tab)</a>
+            <h2>Video</h2>
+            <video width="400" controls>
+                <source src="video/video7wonders.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+            <h2>Landmarks Information</h2>
+            <table>
+                <tr>
+                    <th>Landmark</th>
+                    <th>Interesting Fact</th>
+                </tr>
+                <tr>
+                    <td>Christ the Redeemer</td>
+                    <td>The statue was struck by lightning in 2014.</td>
+                </tr>
+                <tr>
+                    <td>Great Wall of China</td>
+                    <td>It was originally built to protect against invasions.</td>
+                </tr>
+                <tr>
+                    <td>Petra</td>
+                    <td>Some of the city was carved directly from the rock.</td>
+                </tr>
+                <tr>
+                    <td>Colosseum</td>
+                    <td>The Colosseum could be flooded for mock naval battles.</td>
+                </tr>
+                <tr>
+                    <td>Chichén Itzá</td>
+                    <td>The pyramid casts a shadow of a serpent during the equinox.</td>
+                </tr>
+                <tr>
+                    <td>Machu Picchu</td>
+                    <td>Its location was a well-kept secret until its rediscovery in 1911.</td>
+                </tr>
+                <tr>
+                    <td>Taj Mahal</td>
+                    <td>There are myths that Shah Jahan planned to build a black Taj Mahal.</td>
+                </tr>
+            </table> <!-- Ordered List -->
+            <h2>List of Landmarks</h2>
+            <ol>
+                <li>Christ the Redeemer - Located in Brazil</li>
+                <li>Great Wall of China - Located in China</li>
+                <li>Petra - Located in Jordan</li>
+                <li>Colosseum - Located in Italy</li>
+                <li>Chichén Itzá - Located in Mexico</li>
+                <li>Machu Picchu - Located in Peru</li>
+                <li>Taj Mahal - Located in India</li>
+            </ol> <!-- Unordered List -->
+            <h2>Key Facts</h2>
+            <ul>
+                <li>Christ the Redeemer: The statue's right thumb was damaged in a storm.</li>
+                <li>Great Wall of China: It is made up of various materials, including stone, brick, and tamped earth.
+                </li>
+                <li>Petra: It was rediscovered by the Swiss explorer Johann Ludwig Burckhardt in 1812.</li>
+                <li>Colosseum: Over 500,000 people and over a million wild animals were killed in the arena.</li>
+                <li>Chichén Itzá: The site also contains a large cenote (sacred well).</li>
+                <li>Machu Picchu: The city is located at an altitude of approximately 2,430 meters (7,970 feet).</li>
+                <li>Taj Mahal: It took around 20 years and 20,000 workers to complete the construction.</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>Jan Wdowiak 2tb</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const button = document.getElementById('dropdownButton');
+            const menu = document.getElementById('dropdownMenu');
+
+            button.addEventListener('click', () => {
+                event.stopPropagation();
+                button.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!button.contains(event.target) && !menu.contains(event.target)) {
+                    button.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

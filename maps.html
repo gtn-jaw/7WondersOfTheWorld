@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Wonders of the World : maps</title>
+    <link rel="icon" href="images/Logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="first">
+        <div class="left">
+            <img src="images/Logo.svg" alt="logo">
+        </div>
+        <div class="left">
+            <a href="index.html">
+                <div class="line"></div>
+                <p>Home</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="support.html">
+                <div class="line"></div>
+                <p>Support</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="about.html">
+                <div class="line"></div>
+                <p>About</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="right" id="dropdownButton">
+            <img src="images/More_left.svg" class="More" alt="MoreL">
+            <img src="images/More_middle.svg" class="More" alt="MoreM">
+            <img src="images/More_right.svg" class="More" alt="MoreR">
+        </div>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="gallery.html">
+                <p>Gallery</p>
+            </a>
+            <a href="maps.html">
+                <p>Maps</p>
+            </a>
+        </div>
+    </header>
+    <header class="second">
+        <div class="left">
+            <img src="images/Logo.svg" alt="logo">
+        </div>
+        <div class="left">
+            <a href="index.html">
+                <div class="line"></div>
+                <p>Home</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="support.html">
+                <div class="line"></div>
+                <p>Support</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="about.html">
+                <div class="line"></div>
+                <p>About</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="gallery.html">
+                <div class="line"></div>
+                <p>Gallery</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        <div class="left">
+            <a href="maps.html">
+                <div class="line"></div>
+                <p>Maps</p>
+                <div class="line"></div>
+            </a>
+        </div>
+        
+    </header>
+    <main class="maps">
+        <div id="content">
+            <p>Maps</p>
+
+            <div>
+            <p>Christ the Redeemer</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2150.1169635956944!2d-43.21162418987292!3d-22.951897895603263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997fd5984aa13f%3A0x9dc984d7019502de!2sPomnik%20Chrystusa%20Odkupiciela%20w%20Rio%20de%20Janeiro!5e1!3m2!1spl!2spl!4v1735852046829!5m2!1spl!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <p>Great Wall of China</p>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=115.99730014801025%2C40.364923295769074%2C116.01266384124756%2C40.396110637412285&amp;layer=mapnik" style="border: 1px solid black"></iframe>
+            
+            <p>Petra</p>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=35.246200561523445%2C30.068499724652725%2C35.49201965332032%2C30.633776387293366&amp;layer=mapnik" style="border: 1px solid black"></iframe>
+            
+            <p>Colosseum</p>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=12.490500211715698%2C41.88637630587126%2C12.494341135025024%2C41.89399573568254&amp;layer=mapnik" style="border: 1px solid black"></iframe>
+
+            <p>Chichén Itzá</p>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-88.5727643966675%2C20.673323062352047%2C-88.56508255004883%2C20.69247433963666&amp;layer=mapnik" style="border: 1px solid black"></iframe>
+
+            <p>Machu Picchu</p>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-72.54903316497804%2C-13.174371402349239%2C-72.54135131835939%2C-13.154438739306425&amp;layer=mapnik" style="border: 1px solid black"></iframe>
+
+            <p>Taj Mahal</p>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=78.04112970829011%2C27.1727324305837%2C78.04305016994478%2C27.1772851764606&amp;layer=mapnik" style="border: 1px solid black"></iframe>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <p>Jan Wdowiak 2tb</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const button = document.getElementById('dropdownButton');
+            const menu = document.getElementById('dropdownMenu');
+
+            button.addEventListener('click', () => {
+                event.stopPropagation();
+                button.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!button.contains(event.target) && !menu.contains(event.target)) {
+                    button.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
