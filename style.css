@@ -666,8 +666,8 @@ footer {
 
         main.index > div
         {
-            p.sec { display: inline; }
-            p.base { display: none; }
+            p.sec { display: inline !important; }
+            p.base { display: none !important; }
         }
     }
 
@@ -805,8 +805,8 @@ footer {
 
     main.index > div
         {
-            p.sec { display: none; }
-            p.base { display: inline; }
+            p.sec { display: none !important; }
+            p.base { display: inline !important; }
         }
 
     main.galleryPage>#content>.gallery-container {
