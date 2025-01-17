@@ -300,6 +300,9 @@ main.index {
                 float: left;
                 margin-right: 10px;
             }
+            
+            p.sec { display: none; }
+            p.base { display: inline; }
         }
 
         #OnTop {
@@ -660,6 +663,12 @@ footer {
                 color: #537459;
             }
         }
+
+        main.index > div
+        {
+            p.sec { display: inline; }
+            p.base { display: none; }
+        }
     }
 
     #OnTop {
@@ -793,6 +802,12 @@ footer {
     main.index>#content>div>p {
         font-size: 25px !important;
     }
+
+    main.index > div
+        {
+            p.sec { display: none; }
+            p.base { display: inline; }
+        }
 
     main.galleryPage>#content>.gallery-container {
         max-width: unset !important;
