@@ -664,7 +664,7 @@ footer {
             }
         }
 
-        main.index > div
+        main.index div
         {
             p.sec { display: inline !important; }
             p.base { display: none !important; }
