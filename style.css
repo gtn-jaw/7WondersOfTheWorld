@@ -663,13 +663,13 @@ footer {
                 color: #537459;
             }
         }
+    }
 
-        main.index div
+    main.index > div
         {
             p.sec { display: inline !important; }
             p.base { display: none !important; }
         }
-    }
 
     #OnTop {
         width: 200px !important;
